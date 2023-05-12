@@ -47,4 +47,5 @@ add_my_fruit = streamlit.text_input('What fruit would you like to add?','Jackfru
 fruit_list = my_cur.fetchall()
 #streamlit.text(type(my_data_rows))
 fruit_list.append(add_my_fruit)
-streamlit.text("Thanks for adding ",add_my_fruit)
+streamlit.dataframe(fruit_list)
+#streamlit.text("Thanks for adding ",add_my_fruit)
