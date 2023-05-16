@@ -48,6 +48,7 @@ my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
 my_cur.execute("SELECT * from fruit_load_list")
 fruit_list = my_cur.fetchall()
+streamlit.text(fruit_list[0])
 fruit_list += ["".join([str(i) for i in add_my_fruit])]
 #fruit_list = fruit_list[:len(fruit_list)] + list(add_my_fruit)
 #fruit_list.extend([add_my_fruit])
